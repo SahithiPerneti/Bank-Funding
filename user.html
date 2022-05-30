@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user.css">
+    <title>User Login</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <h3 class="logo">Welcome <script>document.write(localStorage.getItem("name"))</script></h3>
+    
+          <nav>
+            <ul>
+              <li><a href="user.html">Home</a></li>
+              <li><a href="savings.html">Savings</a></li>
+              <li><a href="deposit.html">Fixed Deposit</a></li>
+              <li><a href="logout.html">Log Out</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    
+    <form>
+        <div id="acctBalance">
+
+            <span class="wrap"></span>
+            <h4 id="savings"><a href="savings.html">Savings Account</a></h4>
+            <h4 id="itemList">  
+               Total Amount:Rs <script>document.write(localStorage.getItem("balance"))</script>
+            </h4>
+            <label id="acctBalanceLbl"></label>
+        </div>
+    </form>
+    <script type="text/javascript" src="user.js"></script>
+</body>
+</html>

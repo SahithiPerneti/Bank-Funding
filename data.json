@@ -1,0 +1,37 @@
+{"users" : [{
+    "username":"Sowmya",
+    "id":0,
+    "password":"Sowmya",
+    "type":"admin",
+    "branch_amount": 10000
+},{
+    "username":"Charishma",
+    "id":1,
+    "password":"Charishma",
+    "type":"user",
+    "Balance": 1000
+},{
+    "username":"Shruthi",
+    "id":2,
+    "password":"Shruthi",
+    "type":"user",
+    "Balance": 1500
+},{
+    "username":"Sahithi",
+    "id":3,
+    "password":"Sahithi",
+    "type":"user",
+    "Balance": 2000
+},{
+    "username":"Nikitha",
+    "id":4,
+    "password":"Nikitha",
+    "type":"user",
+    "Balance": 2500
+},{
+    "username":"Lokitha",
+    "id":5,
+    "password":"Lokitha",
+    "type":"user",
+    "Balance": 2500
+}]}

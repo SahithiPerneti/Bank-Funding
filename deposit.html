@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="deposit.css">
+    <title>Savings Account</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h3 class="logo">Welcome
+                <script>document.write(localStorage.getItem("name"))</script>
+            </h3>
+
+            <nav>
+                <ul>
+                    <li><a href="user.html">Home</a></li>
+                    <li><a href="savings.html">Savings</a></li>
+                    <li><a href="deposit.html">Fixed Deposit</a></li>
+                    <li><a href="trans.html">Transactions</a></li>
+                    <li><a href="logout.html">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="table_container">
+        <table id="table">
+            <tbody>
+                <tr>
+                    <td>Principal Amount :</td>
+                    <td><input type="text" id="p_amount"></td>
+                </tr>
+                <tr>
+                    <td>Interest rate :</td>
+                    <td><input type="text" id="I_rate"></td>
+                </tr>
+                <tr>
+                    <td>Interest Compounding :</td>
+                    <td>
+                        <select id="c_i">
+                            <option value="12">Monthly</option>
+                            <option value="4">Quarterly</option>
+                            <option value="2">Half-yearly</option>
+                            <option value="1">Yearly</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Period :</td>
+                    <td>
+                        <!-- <select id="period_months">
+                            <option>1 Year</option>
+                            <option>5 years</option>
+                        </select> -->
+                        <input type="text" id="period_months">
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="reset" onclick="reset()">Reset</button></td>
+                    <td><button type="button" onclick="maturity()">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Maturity Value :</td>
+                    <td><input id="m_value"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript" src="deposit.js"></script>
+</body>
+
+</html>

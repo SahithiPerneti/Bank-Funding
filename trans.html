@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+        body {
+            margin: 0;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 800;
+            background-color: aliceblue;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header {
+            background: rgb(73, 130, 252);
+        }
+
+        header::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .logo {
+            float: left;
+            padding: 10px 0;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-left: 70px;
+            padding-top: 23px;
+
+            position: relative;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        nav a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            background-color: #444;
+
+            position: absolute;
+            top: 0;
+            width: 0%;
+
+            transition: all ease-in-out 250ms;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h3 class="logo">Welcome
+                <script>document.write(localStorage.getItem("name"))</script>
+            </h3>
+
+            <nav>
+                <ul>
+                    <li><a href="user.html">Home</a></li>
+                    <li><a href="savings.html">Savings</a></li>
+                    <li><a href="deposit.html">Fixed Deposit</a></li>
+                    <li><a href="trans.html">Transactions</a></li>
+                    <li><a href="logout.html">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <!-- <ul>
+            <li id="trans_list"></li>
+        </ul> -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Transactions:</th>
+                </tr>
+            </thead>
+            <tbody id="trans_list"></tbody>
+        </table>
+    </div>
+    <script>
+        let x = 0;
+        var old_data = JSON.parse(localStorage.getItem("transactions"));
+        console.log(old_data);
+
+        // function add_element_to_array() {
+        //     array[x] = document.getElementById("text1").value;
+        //     alert(`Element: ${array[x]} Added at index ${x}`);
+        //     x++;
+        //     document.getElementById("text1").value = "";
+        // }
+
+        function display_array() {
+            let e = "<hr/>";
+
+            for (let y = 0; y < old_data.length; y++) {
+                e += `${old_data[y]}<br/><br/>`;
+            }
+            document.getElementById("trans_list").innerHTML = e;
+        }
+        display_array();
+    </script>
+</body>
+
+</html>
